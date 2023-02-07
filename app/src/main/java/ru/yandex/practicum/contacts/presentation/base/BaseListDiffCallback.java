@@ -9,13 +9,11 @@ import org.jetbrains.annotations.Nullable;
 
 public class BaseListDiffCallback<T extends ListDiffInterface<T>> extends DiffUtil.ItemCallback<T> {
 
-
     @Nullable
     @Override
     public Object getChangePayload(@NonNull T oldItem, @NonNull T newItem) {
         return newItem;
     }
-
 
     @Override
     public boolean areItemsTheSame(@NonNull T oldItem, @NonNull T newItem) {
@@ -26,4 +24,5 @@ public class BaseListDiffCallback<T extends ListDiffInterface<T>> extends DiffUt
     public boolean areContentsTheSame(@NonNull T oldItem, @NonNull T newItem) {
         return oldItem.equals(newItem);
     }
+
 }
